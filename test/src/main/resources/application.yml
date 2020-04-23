@@ -1,0 +1,20 @@
+# ./runDynamoDB.sh
+amazon.dynamodb.endpoint: http://localhost:8000
+
+
+spring:
+  cache:
+    dbcache:
+      manager:
+        table-prefix: "cache-"
+        auto-create-cache-tables: true
+      cache:
+        simple:
+          value-class: java.lang.String
+          ttl: 1m
+        graph:
+          value-class: cloud.angst.dbcache.app.model.Graph
+          ttl: 1m
+        list:
+          value-class: java.util.ArrayList
+          ttl: 1m
