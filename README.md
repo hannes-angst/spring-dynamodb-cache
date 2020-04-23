@@ -63,5 +63,5 @@ How you use and configure the caching is up to you :)
               ttl: 0
             list:
               value-class: java.util.ArrayList
-              ttl: 2
+              ttl: 2d
 
